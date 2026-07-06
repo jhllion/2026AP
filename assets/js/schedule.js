@@ -37,16 +37,17 @@ function renderSchedule() {
               <td class="col-day ${isWeekend ? 'is-weekend' : ''}">${weekday}</td>
               <td class="col-time">${item.time || ''}</td>
               <td class="col-note">${item.note}</td>
+              <td class="col-absent">${item.absent || ''}</td>
             </tr>`;
         }).join('')
-      : `<tr class="empty-row"><td colspan="4">예정된 일정이 없어요</td></tr>`;
+      : `<tr class="empty-row"><td colspan="5">예정된 일정이 없어요</td></tr>`;
 
     return `
       <div class="month-block">
         <h2 class="month-label">${month.label}</h2>
         <table class="schedule-table">
           <thead>
-            <tr><th>날짜</th><th>요일</th><th>시간</th><th>내용</th></tr>
+            <tr><th>날짜</th><th>요일</th><th>시간</th><th>내용</th><th>결석</th></tr>
           </thead>
           <tbody>${rows}</tbody>
         </table>

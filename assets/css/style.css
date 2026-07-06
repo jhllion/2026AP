@@ -380,6 +380,7 @@ a{ color: inherit; text-decoration: none; }
 .col-day{ width: 44px; color: var(--ink-soft); }
 .col-day.is-weekend{ color: var(--rust); font-weight: 600; }
 .col-time{ font-family: var(--font-mono); width: 72px; color: var(--ink-soft); }
+.col-absent{ color: var(--ink-soft); }
 
 .schedule-table tr.is-today td{
   background: rgba(178,73,46,0.1);
