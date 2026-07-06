@@ -2,18 +2,18 @@
    토큰
    ========================================================== */
 :root{
-  --cork: #4A3222;
-  --cork-dark: #3B2718;
-  --cork-light: #5C4028;
-  --paper: #F8F3E6;
-  --paper-shadow: rgba(20,12,4,0.35);
+  --kraft: #D9C4A0;
+  --kraft-fleck-dark: rgba(107, 78, 42, 0.14);
+  --kraft-fleck-light: rgba(255, 250, 235, 0.4);
+  --paper: #FBF7EC;
+  --paper-shadow: rgba(60, 40, 15, 0.22);
   --ink: #2B211A;
   --ink-soft: #6B5B48;
-  --gold: #D4A017;
+  --rust: #B2492E;
   --pin-red: #B23A2E;
-  --tape: rgba(255,255,255,0.55);
+  --tape: rgba(255,255,255,0.5);
 
-  --font-display: 'Song Myung', serif;
+  --font-display: 'Black Han Sans', sans-serif;
   --font-body: 'IBM Plex Sans KR', -apple-system, sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
 
@@ -24,7 +24,7 @@
 
 body{
   margin: 0;
-  background: var(--cork);
+  background: var(--kraft);
   color: var(--ink);
   font-family: var(--font-body);
   line-height: 1.6;
@@ -33,19 +33,20 @@ body{
 
 a{ color: inherit; text-decoration: none; }
 
-/* 코르크보드 텍스처 (시그니처 배경) */
-.cork-bg{
+/* 크래프트지 텍스처 (시그니처 배경) */
+.kraft-bg{
   position: fixed;
   inset: 0;
   z-index: -1;
-  background-color: var(--cork);
+  background-color: var(--kraft);
   background-image:
-    radial-gradient(circle at 15% 20%, var(--cork-dark) 0, transparent 1.5px),
-    radial-gradient(circle at 65% 55%, var(--cork-light) 0, transparent 1.5px),
-    radial-gradient(circle at 35% 80%, var(--cork-dark) 0, transparent 1.5px),
-    radial-gradient(circle at 85% 30%, var(--cork-light) 0, transparent 1.5px),
-    radial-gradient(circle at 50% 45%, var(--cork-dark) 0, transparent 1.5px);
-  background-size: 60px 60px, 70px 70px, 55px 55px, 65px 65px, 80px 80px;
+    radial-gradient(circle at 15% 20%, var(--kraft-fleck-dark) 0, transparent 1.2px),
+    radial-gradient(circle at 65% 55%, var(--kraft-fleck-light) 0, transparent 1.2px),
+    radial-gradient(circle at 35% 80%, var(--kraft-fleck-dark) 0, transparent 1.2px),
+    radial-gradient(circle at 85% 30%, var(--kraft-fleck-light) 0, transparent 1.2px),
+    radial-gradient(circle at 50% 45%, var(--kraft-fleck-dark) 0, transparent 1.2px),
+    repeating-linear-gradient(90deg, rgba(107,78,42,0.035) 0px, transparent 1px, transparent 3px);
+  background-size: 50px 50px, 60px 60px, 45px 45px, 55px 55px, 70px 70px, 4px 4px;
 }
 
 /* ---------- 마퀴 헤더 ---------- */
@@ -53,28 +54,20 @@ a{ color: inherit; text-decoration: none; }
   position: relative;
   padding: 56px 24px 40px;
   text-align: center;
-  border-bottom: 6px double rgba(212,160,23,0.4);
+  border-bottom: 3px solid rgba(107,78,42,0.25);
 }
 .marquee-inner{ max-width: var(--max); margin: 0 auto; }
-.marquee-eyebrow{
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.2em;
-  color: var(--gold);
-  margin: 0 0 16px;
-}
 .marquee-title{
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: clamp(36px, 7vw, 64px);
-  color: var(--paper);
+  font-size: clamp(36px, 7vw, 60px);
+  color: var(--ink);
   margin: 0 0 12px;
-  text-shadow: 0 2px 0 rgba(0,0,0,0.3);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
 }
 .marquee-sub{
   font-size: 14px;
-  color: rgba(248,243,230,0.65);
+  color: var(--ink-soft);
   margin: 0;
 }
 
@@ -108,7 +101,7 @@ a{ color: inherit; text-decoration: none; }
 .dday-caption{
   margin: 12px 0 0;
   font-size: 13px;
-  color: rgba(248,243,230,0.6);
+  color: var(--ink-soft);
 }
 
 /* ---------- 콜보드 카드 ---------- */
@@ -185,7 +178,7 @@ a{ color: inherit; text-decoration: none; }
   text-align: center;
   padding: 32px 24px 48px;
   font-size: 13px;
-  color: rgba(248,243,230,0.5);
+  color: var(--ink-soft);
 }
 
 /* ---------- 반응형 ---------- */
@@ -196,7 +189,7 @@ a{ color: inherit; text-decoration: none; }
 
 /* ---------- 포커스 ---------- */
 .note:focus-visible{
-  outline: 2px solid var(--gold);
+  outline: 2px solid var(--rust);
   outline-offset: 4px;
 }
 
@@ -207,7 +200,7 @@ a{ color: inherit; text-decoration: none; }
 /* ---------- 서브페이지 공통(준비중 안내) ---------- */
 .sub-header{
   padding: 32px 24px;
-  border-bottom: 1px solid rgba(212,160,23,0.3);
+  border-bottom: 1px solid rgba(107,78,42,0.25);
 }
 .sub-header-inner{
   max-width: var(--max);
@@ -221,13 +214,13 @@ a{ color: inherit; text-decoration: none; }
 .sub-title{
   font-family: var(--font-display);
   font-size: 24px;
-  color: var(--paper);
+  color: var(--ink);
   margin: 0;
 }
 .back-link{
   font-size: 13px;
-  color: var(--gold);
-  border-bottom: 1px solid var(--gold);
+  color: var(--rust);
+  border-bottom: 1px solid var(--rust);
   padding-bottom: 1px;
 }
 .placeholder{
@@ -235,7 +228,7 @@ a{ color: inherit; text-decoration: none; }
   margin: 0 auto;
   padding: 100px 24px;
   text-align: center;
-  color: rgba(248,243,230,0.5);
+  color: var(--ink-soft);
   font-family: var(--font-mono);
   font-size: 14px;
 }

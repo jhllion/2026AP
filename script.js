@@ -1,5 +1,5 @@
 // 공연일을 여기서 바꾸세요 (YYYY-MM-DD)
-const SHOW_DATE = "2026-11-14";
+const SHOW_DATE = "2026-11-28";
 
 document.addEventListener('DOMContentLoaded', () => {
   const numEl = document.getElementById('ddayNumber');
