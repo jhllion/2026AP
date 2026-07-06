@@ -23,7 +23,8 @@
     <section class="guestbook-section">
 
       <form id="guestbookForm" class="guestbook-form">
-        <textarea id="guestbookInput" maxlength="300" placeholder="익명으로 한마디 남겨보세요 (최대 300자)"></textarea>
+        <input type="text" id="guestbookName" maxlength="20" placeholder="이름 (선택, 비우면 익명)">
+        <textarea id="guestbookInput" maxlength="300" placeholder="한마디 남겨보세요 (최대 300자)"></textarea>
         <div class="guestbook-form-footer">
           <span id="guestbookStatus" class="guestbook-status"></span>
           <button type="submit" class="guestbook-submit">남기기</button>
