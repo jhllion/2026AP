@@ -3,13 +3,13 @@
 // date는 꼭 "YYYY-MM-DD" 형식으로 써주세요. time, note, absent는 자유롭게 적으면 됩니다.
 
 const SCHEDULE = [
-  { date: "2026-07-12", time: "13:00", note: "연습", absent: "" },
+  { date: "2026-07-12", time: "13:00", note: "연습, 스텝데이", absent: "" },
   { date: "2026-07-19", time: "13:00", note: "연습", absent: "" },
-  { date: "2026-07-26", time: "13:00", note: "연습", absent: "" },
+  { date: "2026-07-26", time: "13:00", note: "연습, 스텝데이", absent: "" },
   { date: "2026-08-02", time: "13:00", note: "연습", absent: "" },
-  { date: "2026-08-09", time: "13:00", note: "연습", absent: "" },
+  { date: "2026-08-09", time: "13:00", note: "연습, 스텝데이", absent: "" },
   { date: "2026-08-16", time: "13:00", note: "연습", absent: "" },
-  { date: "2026-08-23", time: "13:00", note: "연습", absent: "" },
+  { date: "2026-08-23", time: "13:00", note: "연습", absent: "이진형" },
   { date: "2026-08-30", time: "13:00", note: "연습", absent: "" },
   { date: "2026-09-06", time: "13:00", note: "연습", absent: "" },
   { date: "2026-09-13", time: "13:00", note: "연습", absent: "" },
@@ -23,5 +23,6 @@ const SCHEDULE = [
   { date: "2026-11-08", time: "13:00", note: "연습", absent: "" },
   { date: "2026-11-15", time: "13:00", note: "연습", absent: "" },
   { date: "2026-11-22", time: "13:00", note: "연습", absent: "" },
+  { date: "2026-11-23", time: "09:00", note: "공연장 입장", absent: "" },
   { date: "2026-11-28", time: "09:00", note: "🎭 공연", absent: "" }
 ];
