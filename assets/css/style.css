@@ -334,3 +334,66 @@ a{ color: inherit; text-decoration: none; }
   color: var(--rust);
   text-decoration: underline;
 }
+
+/* ---------- 연습 일정 표 ---------- */
+.schedule-section{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 24px 24px 96px;
+}
+.schedule-wrap{
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.month-label{
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 22px;
+  color: var(--ink);
+  margin: 0 0 12px;
+}
+.schedule-table{
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--paper);
+  box-shadow: 0 6px 14px var(--paper-shadow);
+}
+.schedule-table th{
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(107,78,42,0.2);
+}
+.schedule-table td{
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(107,78,42,0.1);
+  font-size: 14px;
+  color: var(--ink);
+}
+.schedule-table tr:last-child td{ border-bottom: none; }
+
+.col-date{ font-family: var(--font-mono); width: 64px; }
+.col-day{ width: 44px; color: var(--ink-soft); }
+.col-day.is-weekend{ color: var(--rust); font-weight: 600; }
+.col-time{ font-family: var(--font-mono); width: 72px; color: var(--ink-soft); }
+
+.schedule-table tr.is-today td{
+  background: rgba(178,73,46,0.1);
+  font-weight: 600;
+}
+.schedule-table tr.empty-row td{
+  color: var(--ink-soft);
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 560px){
+  .schedule-table{ font-size: 13px; }
+  .schedule-table th, .schedule-table td{ padding: 10px 10px; }
+  .col-time{ width: 60px; }
+}
