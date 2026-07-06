@@ -14,17 +14,32 @@
 
   <header class="sub-header">
     <div class="sub-header-inner">
-      <h1 class="sub-title">💬방명록</h1>
+      <h1 class="sub-title">방명록</h1>
       <a class="back-link" href="index.html">← 콜보드로 돌아가기</a>
     </div>
   </header>
 
   <main>
-    <p class="placeholder">
-      준비 중입니다.<br>
-      익명 방명록은 구체적으로 어떻게 저장할지(예: 별도 서비스 연동)<br>
-      정해지면 함께 설계해봐요.
-    </p>
+    <section class="guestbook-section">
+
+      <form id="guestbookForm" class="guestbook-form">
+        <textarea id="guestbookInput" maxlength="300" placeholder="익명으로 한마디 남겨보세요 (최대 300자)"></textarea>
+        <div class="guestbook-form-footer">
+          <span id="guestbookStatus" class="guestbook-status"></span>
+          <button type="submit" class="guestbook-submit">남기기</button>
+        </div>
+      </form>
+
+      <div id="guestbookList" class="guestbook-list">
+        <p class="notice-loading">불러오는 중...</p>
+      </div>
+
+    </section>
   </main>
+
+  <!-- Supabase 클라이언트 라이브러리 -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/guestbook-config.js"></script>
+  <script src="assets/js/guestbook.js"></script>
 </body>
 </html>
