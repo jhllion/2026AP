@@ -4,12 +4,12 @@
 
 const SCHEDULE = [
   { date: "2026-07-12", time: "13:00", note: "연습, 스텝데이", absent: "" },
-  { date: "2026-07-19", time: "13:00", note: "연습", absent: "" },
-  { date: "2026-07-26", time: "13:00", note: "연습, 스텝데이", absent: "" },
+  { date: "2026-07-19", time: "13:00", note: "연습", absent: "민경민" },
+  { date: "2026-07-26", time: "13:00", note: "연습, 스텝데이", absent: "김용호" },
   { date: "2026-08-02", time: "13:00", note: "연습", absent: "" },
-  { date: "2026-08-09", time: "13:00", note: "연습, 스텝데이", absent: "" },
-  { date: "2026-08-16", time: "13:00", note: "연습", absent: "" },
-  { date: "2026-08-23", time: "13:00", note: "연습", absent: "이진형" },
+  { date: "2026-08-09", time: "13:00", note: "연습, 스텝데이", absent: "김현정" },
+  { date: "2026-08-16", time: "13:00", note: "연습", absent: "윤정인, 김현정" },
+  { date: "2026-08-23", time: "13:00", note: "연습", absent: "윤정인, 이진형, 김현정" },
   { date: "2026-08-30", time: "13:00", note: "연습", absent: "" },
   { date: "2026-09-06", time: "13:00", note: "연습", absent: "" },
   { date: "2026-09-13", time: "13:00", note: "연습", absent: "" },
